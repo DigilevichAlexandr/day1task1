@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ASP.NET.Digilevich.Day1.Task2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите число");
+            double number = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите степень корня");
+            double root = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите точность (например 1000) ");
+            double precision = double.Parse(Console.ReadLine());
+            double result = NeutonsClass.NeutonsMethod(number, root, precision);
+            Console.WriteLine("ответ " + result.ToString());
+            Console.WriteLine("провека " + Math.Pow(result,root).ToString());
+
+            Console.ReadLine();
+        }
+    }
+}

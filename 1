@@ -1,0 +1,19 @@
+using System;
+public class NeutonsClass
+{
+    /// <summary>
+    /// пример параметров 
+    /// </summary>
+    /// <param name="val"></param>
+    /// <param name="n"></param>
+    /// <param name="prec"></param>
+    /// <returns></returns>
+    public static double NeutonsMethod(double val,double n,double prec)
+	{
+        double x = 1;
+        for (int i = 0; i < prec; i++)
+            if (x == (x = 1.0 / n * (((n - 1) * x) + (val / Math.Pow(x,(double) n - 1)))))
+                break;
+        return x;
+	}
+}

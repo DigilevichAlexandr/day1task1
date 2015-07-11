@@ -13,7 +13,7 @@ namespace ASP.NET.Digilevich.Day1.Task2
             Console.WriteLine("Введите число");
             double number = double.Parse(Console.ReadLine());
             Console.WriteLine("Введите степень корня");
-            double root = double.Parse(Console.ReadLine());
+            int root = int.Parse(Console.ReadLine());
             Console.WriteLine("Введите точность (например 1000) ");
             double precision = double.Parse(Console.ReadLine());
             double result = NeutonsClass.NeutonsMethod(number, root, precision);

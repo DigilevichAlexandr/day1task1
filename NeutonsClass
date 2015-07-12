@@ -8,17 +8,25 @@ public class NeutonsClass
     /// <param name="n"></param>
     /// <param name="prec"></param>
     /// <returns></returns>
-    public static double NeutonsMethod(double val,int n,double prec)
-	{
-        if (n != 2 && n > 0)
+    public static double NeutonsMethod(double val, int n, double prec)
+    {
+        if (n % 2 == 0 && val < 0)
         {
-            double x = 1;
-            for (int i = 0; i < prec; i++)
-                if (x == (x = 1.0 / n * (((n - 1) * x) + (val / Math.Pow(x, (double)n - 1)))))
-                    break;
-            return x;
+            return double.NaN;
         }
         else
-            return double.NaN;        
-	}
+        {
+            if (val == 0)
+                return 0;
+            else
+            {
+                double x = 1;
+                for (int i = 0; i < prec; i++)
+                    if (x == (x = 1.0 / n * (((n - 1) * x) + (val / Math.Pow(x, (double)n - 1)))))
+                        break;
+                return x;
+            }
+            
+        }
+    }
 }
